@@ -14,7 +14,7 @@ public class Route {
     private java.time.LocalDate Date; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
     private Location1 from = new Location1(); //Поле не может быть null
     private Location2 to = new Location2(); //Поле может быть null
-    private float distance; //Значение поля должно быть больше 1
+    private Float distance; //Значение поля должно быть больше 1
 
     public Integer getId() {
         return id;
@@ -60,7 +60,7 @@ public class Route {
         return to.getNamel2();
     }
 
-    public double getDistance() {
+    public float getDistance() {
         return distance;
     }
 

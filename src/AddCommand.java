@@ -14,11 +14,7 @@ public class AddCommand implements Command{
      */
 
     public void execute(String arg, MyCollection myCollection) {
-        try {
-            myCollection.add();
-            System.out.println("Route was added to list");
-        }catch (UnacceptableNumberException e){
-            e.getMessage();
-        }
+        myCollection.add();
+        System.out.println("Route was added to list");
     }
 }

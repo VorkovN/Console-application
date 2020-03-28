@@ -14,10 +14,6 @@ public class ExecuteScriptCommand implements Command {
      */
 
     public void execute(String arg, MyCollection myCollection){
-        try {
-            myCollection.executeScript(arg);
-        }catch (LoopException e){
-            System.out.println("\nInvalid command in file");
-        }
+        myCollection.executeScript(arg);
     }
 }
