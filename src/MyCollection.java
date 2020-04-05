@@ -241,7 +241,7 @@ public class MyCollection {
         try{
             System.out.print("(Float) x = ");
             Float x = Float.parseFloat(sc.nextLine());
-            if (!((1.4e-45f < Math.abs(x)) && (Math.abs(x) < 3.4e+38f))) {
+            if (!((Float.MIN_VALUE < Math.abs(x)) && (Math.abs(x) < Float.MAX_VALUE))) {
                 x(newRoute, sc);
                 System.out.println("Wrong input");
             } else {
@@ -257,7 +257,7 @@ public class MyCollection {
         try{
             System.out.print("(Double) y = ");
             Double y = Double.parseDouble(sc.nextLine());
-            if (!((4.9e-324 < Math.abs(y)) && (Math.abs(y) < 142))) {
+            if (!((Double.MIN_VALUE < Math.abs(y)) && (Math.abs(y) < Double.MAX_VALUE))) {
                 throw new UnacceptableNumberException();
             } else {
                 newRoute.setY(y);
@@ -278,7 +278,7 @@ public class MyCollection {
         try{
             System.out.print("(Long) xl1 = ");
             Long xl1 = Long.parseLong(sc.nextLine());
-            if (!((-9223372036854775808L < xl1) && (xl1 < 9223372036854775807L))) {
+            if (!((Long.MIN_VALUE < xl1) && (xl1 < Long.MAX_VALUE))) {
                 throw new UnacceptableNumberException();
             } else {
                 newRoute.setXl1(xl1);
@@ -293,7 +293,7 @@ public class MyCollection {
         try{
             System.out.print("(Double) yl1 = ");
             Double yl1 = Double.parseDouble(sc.nextLine());
-            if (!((4.9e-324 < Math.abs(yl1)) && (Math.abs(yl1) < 1.7e+308))) {
+            if (!((Double.MIN_VALUE < Math.abs(yl1)) && (Math.abs(yl1) < Double.MAX_VALUE))) {
                 throw new UnacceptableNumberException();
             } else {
                 newRoute.setYl1(yl1);
@@ -308,7 +308,7 @@ public class MyCollection {
         try{
             System.out.print("(long) zl1 = ");
             long zl1 = Long.parseLong(sc.nextLine());
-            if (!((-9223372036854775808L < zl1) && (zl1 < 9223372036854775807L))) {
+            if (!((Long.MIN_VALUE < zl1) && (zl1 < Long.MAX_VALUE))) {
                 throw new UnacceptableNumberException();
             } else {
                 newRoute.setZl1(zl1);
@@ -323,7 +323,7 @@ public class MyCollection {
         try{
             System.out.print("(int) xl2 = ");
             int xl2 = Integer.parseInt(sc.nextLine());
-            if (!((-2147483648 < xl2) && (xl2 < 2147483647))) {
+            if (!((Integer.MIN_VALUE < xl2) && (xl2 < Integer.MAX_VALUE))) {
                 throw new UnacceptableNumberException();
             } else {
                 newRoute.setXl2(xl2);
@@ -338,7 +338,7 @@ public class MyCollection {
         try{
             System.out.print("(Float) yl2 = ");
             Float yl2 = Float.parseFloat(sc.nextLine());
-            if (!((1.4e-45f < Math.abs(yl2)) && (Math.abs(yl2) < 3.4e+38f))) {
+            if (!((Float.MIN_VALUE < Math.abs(yl2)) && (Math.abs(yl2) < Float.MAX_VALUE))) {
                 throw new UnacceptableNumberException();
             } else {
                 newRoute.setYl2(yl2);
@@ -369,7 +369,7 @@ public class MyCollection {
         try{
             System.out.print("(float) distance = ");
             float dist = (Float.parseFloat(sc.nextLine()));
-            if (!((1 < Math.abs(dist)) && (Math.abs(dist) < 3.4e+38f))) {
+            if (!((1 < Math.abs(dist)) && (Math.abs(dist) < Float.MAX_VALUE))) {
                 throw new UnacceptableNumberException();
             } else {
                 newRoute.setDistance(dist);
